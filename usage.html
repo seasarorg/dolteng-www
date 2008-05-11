@@ -57,6 +57,7 @@
 			<li><a href="#project-wizard">プロジェクトの新規作成</a></li>
 			<li><a href="#new-html-page">HTML、Pageクラスの作成</a></li>
 			<li><a href="#database-view">DatabaseView</a></li>
+			<li><a href="#sql-dao">SQLファイルとDaoクラスの相互遷移（S2Dao）</a></li>
 			<li><a href="#marker">マーカー</a></li>
 			<li><a href="#other">その他</a></li>
 		</ul>
@@ -169,6 +170,27 @@ DbLauncherを使用して  <a href="http://www.h2database.com/">H2 Database Engi
 
 <img src="images/scaffold-dialog.gif"/>
 
+<h4><a name="sql-dao">SQLファイルとDaoクラスの相互遷移（S2Dao）</a></h4>
+
+<p><a href="http://s2dao.seasar.org/ja/index.html">S2Dao</a>を使っている場合は
+SQLファイルとDaoクラスの遷移を行うことができます。</p>
+
+<ul>
+	<li>Ctrl+3またはポップアップメニューの「Open Dao Pair」でDao～SQLファイルを遷移する。</li>
+	<li>S2Daoでは、Daoクラスの対象のメソッド名の付近にカーソルを置くと、そのメソッドに対応するSQLファイルに遷移することができる。</li>
+	<li>対応するSQLファイルが存在しない場合、SQLファイルを生成するウィザードが起動する。</li>
+</ul>
+
+<p>SQLファイルからポップアップメニューの「Create New Dto」でDTOを作成することもできます。</p>
+
+<img src="images/create-new-dto.gif"/>
+<br/>
+<img src="images/create-new-dto2.gif"/>
+<br/>
+<img src="images/create-new-dto3.gif"/>
+<br/>
+<img src="images/create-new-dto4.gif"/>
+
 <h4><a name="marker">マーカー</a></h4>
 
 <p>コミッタのブログの<a href="http://d.hatena.ne.jp/taichitaichi/20070115/1168842128">こちらも</a>参考にしてください。</p>
@@ -211,17 +233,11 @@ seasar.orgに配置されているマニュアルを見に行くようにする�
 <p>そのほか以下のように各種遷移が行うことができます。</p>
 
 <ul>
-	<li>Orm.xmlとDao、Entityクラスの自動遷移（KuinaDao）</li>
+	<li>Orm.xmlとDao、Entityクラスの相互遷移（KuinaDao）</li>
 	<ul>
 		<li>Ctrl+3またはポップアップメニューの「Open Dao Pair」でDao～Orm.xmlを遷移する。</li>
 		<li>Ctrl+4またはポップアップメニューの「Open Entity Pair」でEntity～Orm.xmlを遷移する。</li>
 		<li>対応するOrm.xmlが存在しない場合、プロジェクトのPreferencesの「OrmXmlPath」で設定したパスにOrm.xmlの雛形を生成する。</li>
-	</ul>
-	<li>SQLファイルとDaoクラスの自動遷移（S2Dao）</li>
-	<ul>
-		<li>Ctrl+3またはポップアップメニューの「Open Dao Pair」でDao～SQLファイルを遷移する。</li>
-		<li>S2Daoでは、Daoクラスの対象のメソッド名の付近にカーソルを置くと、そのメソッドに対応するSQLファイルに遷移することができる。</li>
-		<li>対応するSQLファイルが存在しない場合、SQLファイルを生成するウィザードが起動する。</li>
 	</ul>
 	<li>HTMLファイルとPage、Actionクラスの相互遷移（S2Dao）</li>
 	<ul>
