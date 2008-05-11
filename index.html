@@ -49,13 +49,13 @@
 <h2>Menu</h2>
 
 <ul>
-	<li><a href="#Abstract">�T�v</a></li>
+	<li><a href="#Abstract">概要</a></li>
 	<li><a href="#news">NEWS</a></li>
-	<li><a href="#Setup">�Z�b�g�A�b�v</a>
-	<li><a href="usage.html">�g����</a></li>
-	<li><a href="#maillist">���[�����O���X�g</a></li>
-	<li><a href="#tracking">�g���b�L���O</a></li>
-	<li><a href="#subversion">Subversion���|�W�g��</a></li>
+	<li><a href="#Setup">セットアップ</a>
+	<li><a href="usage.html">使い方</a></li>
+	<li><a href="#maillist">メーリングリスト</a></li>
+	<li><a href="#tracking">トラッキング</a></li>
+	<li><a href="#subversion">Subversionリポジトリ</a></li>
 </ul>
 
 </div><!-- contents_left -->
@@ -68,100 +68,100 @@
 
 <h2>Welcome to the "dolteng" project.</h2>
 
-<h3><a name="Abstract">�T�v</a></h3>
+<h3><a name="Abstract">概要</a></h3>
 
 <p>
-Dolteng(�ǂ���Ă�)��Eclipse�ɂ��seasar�֘A�v���_�N�g�̊J�����������コ����ׂ̃v���O�C���ł��B
-���ɑ����̋@�\�������Ă��܂��B
+Dolteng(どぅるてん)はEclipseによるseasar関連プロダクトの開発効率を向上させる為のプラグインです。
+非常に多くの機能をもっています。
 </p>
 
 <h3><a name="news">NEWS</a></h3>
 <ul>
-  <li>2008/04/11 Dolteng 0.30.0 �������[�X���܂����B�ύX�_��<a href="http://www.seasar.org/wiki/index.php?SeasarWhatsNew%2F2008-04-11#i136791f">������</a></li>
+  <li>2008/04/11 Dolteng 0.30.0 をリリースしました。変更点は<a href="http://www.seasar.org/wiki/index.php?SeasarWhatsNew%2F2008-04-11#i136791f">こちら</a></li>
 </ul>
 
-<h3><a name="Setup">�Z�b�g�A�b�v</a></h3>
-<p>Eclipse3.3,JDK5.0�ȍ~�œ��삵�܂��B���̍X�V�T�C�g����uDolteng�v��I�����ăC���X�g�[�����Ă��������B</p>
+<h3><a name="Setup">セットアップ</a></h3>
+<p>Eclipse3.3,JDK5.0以降で動作します。次の更新サイトから「Dolteng」を選択してインストールしてください。</p>
 <ul>
   <li><a href="http://eclipse.seasar.org/updates/3.3/ ">http://eclipse.seasar.org/updates/3.3/ </a></li>
 </ul>
 
-<p>�C���X�g�[�����ɍX�V�T�C�g�̉��ɕ\�������
-�uDolteng�v���`�F�b�N�����ꍇ�A�ŏ��Ɉˑ����C�u���������ׂă_�E�����[�h���܂��B
-�uDolteng�v�̉����J���āA�uDolteng Eclipse Plugin�v
-�̂݃`�F�b�N���A�uDolteng �I�t���C���p�ˑ����C�u�����v
-���`�F�b�N���Ȃ������ꍇ�̓��[�J���ɂ���maven2���|�W�g�����g�p���鎖��
-�ŏ��Ɉˑ����C�u�������_�E�����[�h���Ȃ��悤�ɂ��鎖���o���܂��B
+<p>インストール時に更新サイトの下に表示される
+「Dolteng」をチェックした場合、最初に依存ライブラリをすべてダウンロードします。
+「Dolteng」の下を開いて、「Dolteng Eclipse Plugin」
+のみチェックし、「Dolteng オフライン用依存ライブラリ」
+をチェックしなかった場合はローカルにあるmaven2リポジトリを使用する事で
+最初に依存ライブラリをダウンロードしないようにする事も出来ます。
 </p>
 
 <img src="images/updates.gif"/>
 
 <p>
-�uDolteng �I�t���C���p�ˑ����C�u�����v
-���`�F�b�N���Ȃ������ꍇ�͈ˑ����C�u������maven2���|�W�g��������l�ɂ���ׁA
-�uWindow�v-�uPreferences�v�Őݒ�_�C�A���O���J���ADolteng�O���[�v�Őݒ���s���܂��B
+「Dolteng オフライン用依存ライブラリ」
+をチェックしなかった場合は依存ライブラリをmaven2リポジトリから取る様にする為、
+「Window」-「Preferences」で設定ダイアログを開き、Doltengグループで設定を行います。
 </p>
 
 <img src="images/preference.gif"/>
 
 <p>
-�����ł́A�uDownload resources from online�v�̃`�F�b�N�{�b�N�X��on�ɂ�����ŁA
-�uMaven repository Path�v�ɁA���[�J�����|�W�g���̃p�X����͂��܂��B
-�Ⴆ�΁AWindows�ŁA�f�t�H���g�ݒ�̂܂�maven2���g���Ă���ꍇ�ɂ́A
-�uC:\Documents and Settings\���[�U��\.m2�v�̂悤�ɂȂ�܂��B
+ここでは、「Download resources from online」のチェックボックスをonにした上で、
+「Maven repository Path」に、ローカルリポジトリのパスを入力します。
+例えば、Windowsで、デフォルト設定のままmaven2を使っている場合には、
+「C:\Documents and Settings\ユーザ名\.m2」のようになります。
 </p>
 
 <p>
-<a href="http://kuina.seasar.org/ja/index.html">Kuina-Dao</a>���g���ꍇ��Diigu�v���O�C�������̍X�V�T�C�g����C���X�g�[�����Ă��������B
+<a href="http://kuina.seasar.org/ja/index.html">Kuina-Dao</a>を使う場合はDiiguプラグインも次の更新サイトからインストールしてください。
 </p>
 <ul>
   <li><a href="http://eclipse.seasar.org/updates/3.1/ ">http://eclipse.seasar.org/updates/3.1/ </a></li>
 </ul>
 
 <p>
-DB���g���ꍇ��DbLauncher�����̍X�V�T�C�g����C���X�g�[�����Ă��������B
+DBを使う場合はDbLauncherも次の更新サイトからインストールしてください。
 </p>
 <ul>
   <li><a href="http://eclipse.seasar.org/updates/3.2/ ">http://eclipse.seasar.org/updates/3.2/ </a></li>
 </ul>
 
 <p>
-WTP���g��Ȃ��ꍇ��Sysdeo/SQLI Tomcat Launcher�����̍X�V�T�C�g����C���X�g�[�����Ă��������B
+WTPを使わない場合はSysdeo/SQLI Tomcat Launcherも次の更新サイトからインストールしてください。
 </p>
 <ul>
   <li><a href="http://eclipse.seasar.org/updates/3.2/ ">http://eclipse.seasar.org/updates/3.2/ </a></li>
 </ul>
 
-<h3><a href="usage.html">�g����</a></h3>
+<h3><a href="usage.html">使い方</a></h3>
 <ul>
-	<li><a href="usage.html#project-wizard">�v���W�F�N�g�̐V�K�쐬</a></li>
+	<li><a href="usage.html#project-wizard">プロジェクトの新規作成</a></li>
 </ul>
 
-<h3><a name="maillist">���[�����O���X�g</a></h2>
+<h3><a name="maillist">メーリングリスト</a></h2>
 <dl>
   <dt><a href="https://www.seasar.org/mailman/listinfo/seasar-user">seasar-user</a></dt>
     <dd>
-      Seasar2����ъ֘A�v���_�N�g�̗��p�҂̂��߂̃��[�����O���X�g�ł��B<br>
-      Dolteng�𗘗p���Ă��ċ^��Ɏv�������Ƃ⍢�������ƁA�v�]�Ȃǂ͂�����ցB<br>
-      ������[Dolteng]���܂߂Ă���������ƍK���ł��B�܂�Eclipse�̃G���[���O�ɉ����o�Ă���ꍇ�͂��̏��������Ă���������Ɩ��������X���[�Y�ɂȂ�܂��B
+      Seasar2および関連プロダクトの利用者のためのメーリングリストです。<br>
+      Doltengを利用していて疑問に思ったことや困ったこと、要望などはこちらへ。<br>
+      件名に[Dolteng]を含めていただけると幸いです。またEclipseのエラーログに何か出ている場合はその情報も送っていただけると問題解決がスムーズになります。
     </dd>
   <dt><a href="https://www.seasar.org/mailman/listinfo/seasar-dev">seasar-dev</a></dt>
     <dd>
-      Seasar2����ъ֘A�v���_�N�g�J���҂̂��߂̃��[�����O���X�g�ł��B
+      Seasar2および関連プロダクト開発者のためのメーリングリストです。
     </dd>
 </dl>
-<h3><a name="tracking">�g���b�L���O</a></h2>
+<h3><a name="tracking">トラッキング</a></h2>
 <dl>
   <dt><a href="https://www.seasar.org/issues/browse/DOLTENG">JIRA</a></dt>
-    <dd>Dolteng�̃o�O��JIRA�ŊǗ�����Ă��܂��B</dd>
+    <dd>DoltengのバグはJIRAで管理されています。</dd>
 </dl>
-<h3><a name="subversion">Subversion���|�W�g��</a></h2>
-<p>Dolteng �̃\�[�X�R�[�h�́Aseasar.org ��Subversion���|�W�g���Ō��J����Ă��܂��B</br>
-�ǂȂ��ł��A�N�Z�X���ă\�[�X�R�[�h���{�����邱�Ƃ��ł��܂��B</br>
-(�ȉ��̃����N���N���b�N�����Web�o�R�ł��\�[�X�R�[�h���{���ł��܂�)
+<h3><a name="subversion">Subversionリポジトリ</a></h2>
+<p>Dolteng のソースコードは、seasar.org のSubversionリポジトリで公開されています。</br>
+どなたでもアクセスしてソースコードを閲覧することができます。</br>
+(以下のリンクをクリックするとWeb経由でもソースコードを閲覧できます)
 </p>
 <dl>
-<dt><b>SVN���|�W�g����URL</b></dt><dd><a href="https://www.seasar.org/svn/sandbox/dolteng/">https://www.seasar.org/svn/sandbox/dolteng/</a></dd>
+<dt><b>SVNリポジトリのURL</b></dt><dd><a href="https://www.seasar.org/svn/sandbox/dolteng/">https://www.seasar.org/svn/sandbox/dolteng/</a></dd>
 </dl>
 
 </div><!-- section -->
