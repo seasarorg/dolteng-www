@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="keywords" content="dolteng, Seasar, The Seasar Project, The Seasar Foundation, OSS, Open Source Software, Java, Framework" />
+<meta name="description" content="dolteng" />
+<title>dolteng</title>
+<link rel="stylesheet" type="text/css" href="http://www.seasar.org/theme/main.css" media="screen,projection">
+<link rel="stylesheet" type="text/css" href="http://www.seasar.org/theme/print.css" media="print">
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<div id="header">
+
+<div class="line"><span class="hide">spacer</span></div>
+
+<div id="logo"><h2 id="h01" class="hide">The Seasar Foundation Project Site</h2><img src="http://www.seasar.org/images/seasar_logo_blue.gif" alt="The Seasar Project" width="390" height="180"></div>
+
+<div id="tool">
+
+<h2><a href="http://search.seasar.org/">Site Search</a></h2>
+<form id="search" name="search" action="http://search.seasar.org/">
+<div>
+	<input id="search_phrase" type="text" name="phrase" size="20" />
+	<input type="hidden" name="perpage" value="30" />
+	<input type="hidden" name="enc" value="UTF-8" />
+	<input id="search_go" type="submit" value="Search" />
+</div>
+</form>
+<h2>Seasar Banner</h2>
+
+<p><a href="http://www.seasar.org/images/seasar_banner.gif"><img src="http://www.seasar.org/images/seasar_banner.gif" alt="Seasar Banner" title="Seasar Banner" width="146" height="33"></a></p>
+
+</div>
+
+</div><!-- header -->
+
+
+<div id="contents_left">
+
+<h2>Menu</h2>
+
+<ul>
+	<li><a href="index.html#Abstract">概要</a></li>
+	<li><a href="index.html#news">NEWS</a></li>
+	<li><a href="index.html#Setup">セットアップ</a>
+	<li><a href="usage.html">使い方</a></li>
+	<li>組み合わせ
+		<ul>
+			<li><a href="#abstract">概要</a></li>
+			<li><a href="#new_wizard">新規作成Wizard</a></li>
+			<li><a href="#scaffold">Scaffold</a></li>
+		</ul>
+	</li>
+	<li><a href="index.html#maillist">メーリングリスト</a></li>
+	<li><a href="index.html#tracking">トラッキング</a></li>
+	<li><a href="index.html#subversion">Subversionリポジトリ</a></li>
+</ul>
+
+</div><!-- contents_left -->
+
+<div id="contents_center">
+
+<div id="article">
+
+<div class="section">
+
+<h2>Doltengがサポートするフレームワークの組み合わせ</h2>
+
+<h3><a name="abstract">概要</a></h3>
+
+<p>Doltengは多数のフレームワークをサポートしていますが，全ての組み合わせでテストされているわけではなく，組み合わせによって使えない機能もあります．</p>
+
+<h3><a name="new_wizard">新規作成Wizard</a></h3>
+<p>新規作成Wizardで選択できる組み合わせのうち，テストされている組み合わせは以下のとおりです．表にない組み合わせは，最新のリリースではテストされていません．問題を発見した場合は<a href="https://ml.seasar.org/mailman/listinfo/seasar-user">メーリングリスト</a>等でお知らせください．</p>
+<table border="1">
+  <tbody>
+    <tr>
+      <th>Application Type</th>
+      <th>Presentation</th>
+      <th>Persistence</th>
+      <th>S2JMS (Outbound)</th>
+      <th>S2RMI (Client)</th>
+      <th>ServerManagement</th>
+      <th>JRE</th>
+    </tr>
+    <tr>
+      <td rowspan="6">Web Application</td>
+      <td rowspan="5">Teeda (Page only)</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Sysdeo Tomcat Plugin</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <td>S2Dao</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Sysdeo Tomcat Plugin</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Kuina-Dao (Hibernate)</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Sysdeo Tomcat Plugin</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <td>○</td>
+      <td>-</td>
+      <td>Sysdeo Tomcat Plugin</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>○</td>
+      <td>Sysdeo Tomcat Plugin</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <td>SAStruts</td>
+      <td>S2JDBC</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Sysdeo Tomcat Plugin</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <td rowspan="3">S2JMS-Inbound Application</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>-</td>
+      <td>○</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>Kuina-Dao (Hibernate)</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <td rowspan="2">S2RMI-Server Application</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>Kuina-Dao (Hibernate)</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1.5</td>
+    </tr>
+  </tbody>
+</table>
+<h3><a name="scaffold">Scaffold</a></h3>
+<p>Scaffoldがサポートしているプレゼンテーションおよびパーシステンスフレームワークの組み合わせは以下のとおりです．</p>
+<table border="1">
+  <tbody>
+    <tr>
+      <th>Presentation</th>
+      <th>Persistence</th>
+    </tr>
+    <tr>
+      <td rowspan="4">Teeda (Page only) ※1</td>
+      <td>S2Dao</td>
+    </tr>
+    <tr>
+      <td>Kuina-Dao (Hibernate)</td>
+    </tr>
+    <tr>
+      <td>Kuina-Dao (TopLink)</td>
+    </tr>
+    <tr>
+      <td>Kuina-Dao (OpenJPA)</td>
+    </tr>
+    <tr>
+      <td>SAStruts ※2</td>
+      <td>S2JDBC</td>
+    </tr>
+    <tr>
+      <td>S2Flex2</td>
+      <td>S2Dao</td>
+    </tr>
+  </tbody>
+</table>
+<p>※1 Teeda (with Action) はサポートされません．<br>
+※2 SAStruts+Mayaa はサポートされません．</p>
+</div><!-- section -->
+
+</div><!-- article -->
+
+</div><!-- contents_center -->
+
+<div id="footer">
+<address>&copy; Copyright The Seasar Foundation and the others 2008, all rights
+reserved.</address>
+<div class="line"><span class="hide">spacer</span></div>
+</div><!-- footer -->
+
+</div><!-- wrapper -->
+
+</body>
+</html>
+
