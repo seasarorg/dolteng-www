@@ -48,8 +48,9 @@
 <h2>Menu</h2>
 
 <ul>
-	<li><a href="usage_scaffold.html#Abstract">概要</a></li>
-	<li><a href="usage_scaffold.html#Usage">使い方</a></li>
+	<li><a href="index.html">トップ</a></li>
+	<li><a href="#Abstract">概要</a></li>
+	<li><a href="#Usage">Scaffold Teeda + S2Dao (use public field) の使い方</a></li>
 </ul>
 
 </div><!-- contents_left -->
@@ -60,7 +61,7 @@
 
 <div class="section">
 
-<h2>How to use Scaffold S2Dao public</h2>
+<h2>How to use Scaffold Teeda + S2Dao (use public field)</h2>
 
 <h3><a name="Abstract">概要</a></h3>
 
@@ -68,7 +69,7 @@
 DoltengのScaffold機能は、あるテーブルに対するCRUD(Create Read Update Delete)処理を行うアプリケーションを自動生成します。
 </p>
 
-<h3><a name="Usage">Scaffold S2Dao の使い方</a></h3>
+<h3><a name="Usage">Scaffold Teeda + S2Dao (use public field) の使い方</a></h3>
 
 <p>Eclipseの「File」-「New」-「Other」を選択します。</p>
 <img src="images/scaffold/S2DaoPublic/001_scaffold_s2dao_public.gif"/>
@@ -92,7 +93,7 @@ DatabaseViewから EMPテーブルを右クリックし、「Generate Scaffold A
 <img src="images/scaffold/S2DaoPublic/005_scaffold_s2dao_public.gif"/>
 
 <p>
-ダイアログ下部に表示されている「EMP Retrieval Condition」に表示されているリストから検索条件を選択します。例えば、「SAL」と「HIREDATE」と「EMP_NAME」を選択します。
+Scaffold Typeに「Teeda + S2Dao (use public field)」を選択し、ダイアログ下部に表示されている「EMP Retrieval Condition」に表示されているリストから検索条件を選択します。例えば、「SAL」と「HIREDATE」と「EMP_NAME」を選択します。
 次に、OKボタンを押下することで、アプリケーションを生成します。
 ここで、検索条件を指定しなかった場合は、検索条件やページ移動のコードは生成されません。
 </p>
@@ -100,6 +101,22 @@ DatabaseViewから EMPテーブルを右クリックし、「Generate Scaffold A
 
 <p>検索条件とページ移動の機能が、一覧検索ページに実装されています。</p>
 <img src="images/scaffold/S2DaoPublic/007_scaffold_s2dao_public.gif"/>
+
+<p>
+ディレクトリ「src/main/resources」の配下にある「jdbc.dicon」ファイルを編集します。
+下記のように記述されている箇所があるので、「maxRows」プロパティの行のコメントを外し、
+「maxRows」プロパティを有効にします。
+</p>
+<pre>&lt;component class="org.seasar.extension.jdbc.impl.ConfigurableStatementFactory"&gt;
+	&lt;arg&gt;
+		&lt;component class="org.seasar.extension.jdbc.impl.BasicStatementFactory"/&gt;
+	&lt;/arg&gt;
+	&lt;property name="fetchSize"&gt;100&lt;/property&gt;
+	&lt;!--
+	&lt;property name="maxRows"&gt;100&lt;/property&gt;
+	--&gt;
+&lt;/component&gt;
+</pre>
 
 <p>生成した一覧検索ページを「Dolteng」-「View on Server」にて起動します。</p>
 <img src="images/scaffold/S2DaoPublic/008_scaffold_s2dao_public.gif"/>
