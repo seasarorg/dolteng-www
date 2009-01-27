@@ -83,7 +83,12 @@ Eclipseの「File」-「New」-「Other」を選択します。
 <p>H2 Databaseを起動します。DatabaseViewでDEPTテーブルを右クリックし「Generate Master Detail Application」を選択します。</p>
 <img src="images/scaffold/MasterDetail/S2DaoPublicH2/002_masterDetail_s2dao.gif"/>
 
-<p>「Scaffold Type」に「Master-Detail Teeda + S2Dao (use public field)」を選択します。次に、「Retrieval Condition」で、「LOC」と「DEPT_NO」、「DEPT_NAME」を選択します。次に、「Detail Table」で「EMP」を選択します。</p>
+<p>「Scaffold Type」に「Master-Detail Teeda + S2Dao (use public field)」を選択します。次に、「Retrieval Condition」で、「LOC」と「DEPT_NO」、「DEPT_NAME」を選択します。次に、「Detail Table」で「EMP」を選択し「OK」ボタンを押下します。</p>
+
+<p>「Retrieval Condition」はマスタの一覧表示画面で使用する検索条件を表しています。ここで、検索条件を指定しなかった場合は、検索条件やページ移動のコードは生成されません。</p>
+
+<p>制約条件：Master-Detail Scaffold では、マスタとディテールの結合を表す列名を「"マスタテーブル名"+"_ID"」と仮定して、アプリケーションの生成を行います。
+ここでは、DEPTがマスタテーブル、EMPがディテールテーブルであり、EMPテーブルにおける「DEPT_ID」が結合のために利用されています。</p>
 <img src="images/scaffold/MasterDetail/S2DaoPublicH2/003_masterDetail_s2dao.gif"/>
 
 <p>マスタ－ディテール形式のアプリケーションが生成されました。下記にマスタ－ディテールの編集ページが表示されています。編集ページの上部がマスタ部、下部がディテール部を表しています。</p>
