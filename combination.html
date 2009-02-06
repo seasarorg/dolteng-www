@@ -50,11 +50,24 @@
 	<li><a href="index.html#news">NEWS</a></li>
 	<li><a href="index.html#Setup">セットアップ</a>
 	<li><a href="usage.html">使い方</a></li>
-	<li>組み合わせ
+	<li>Scaffold
+		<ul>
+			<li><a href="usage_scaffold_s2dao.html">Teeda + S2Dao</a></li>
+			<li><a href="usage_scaffold_s2dao_public.html">Teeda + S2Dao (public フィールド)</a></li>
+			<li><a href="usage_scaffold_kuinadao.html">Teeda + Kuina-Dao</a></li>
+		</ul>
+	</li>
+	<li>Scaffold Master-Detail
+		<ul>
+			<li><a href="usage_scaffold_master_detailH_s2dao_public.html">Teeda + S2Dao (public フィールド)</a></li>
+		</ul>
+	</li>
+	<li><strong>組み合わせ</strong>
 		<ul>
 			<li><a href="#abstract">概要</a></li>
 			<li><a href="#new_wizard">新規作成Wizard</a></li>
 			<li><a href="#scaffold">Scaffold</a></li>
+			<li><a href="#scaffold-master-detail">Scaffold Master-Detail</a></li>
 		</ul>
 	</li>
 	<li><a href="index.html#maillist">メーリングリスト</a></li>
@@ -223,6 +236,7 @@
     </tr>
   </tbody>
 </table>
+
 <h3><a name="scaffold">Scaffold</a></h3>
 <p>Scaffoldがサポートしているプレゼンテーションおよびパーシステンスフレームワークの組み合わせは以下のとおりです．</p>
 <table border="1">
@@ -258,6 +272,22 @@
   </tbody>
 </table>
 <p>※1 Teeda (with Action) はサポートされません．</p>
+
+<h3><a name="scaffold-master-detail">Scaffold Master-Detail</a></h3>
+<p>Scaffold Master-Detailがサポートしているプレゼンテーションおよびパーシステンスフレームワークの組み合わせは以下のとおりです．</p>
+<table border="1">
+  <tbody>
+    <tr>
+      <th>Presentation</th>
+      <th>Persistence</th>
+    </tr>
+    <tr>
+      <td>Teeda (Page only) ※2</td>
+      <td>S2Dao</td>
+    </tr>
+  </tbody>
+</table>
+<p>※2 Teeda (with Action) はサポートされません．</p>
 </div><!-- section -->
 
 </div><!-- article -->

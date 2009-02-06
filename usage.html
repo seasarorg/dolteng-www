@@ -51,7 +51,7 @@
 	<li><a href="index.html#Abstract">概要</a></li>
 	<li><a href="index.html#news">NEWS</a></li>
 	<li><a href="index.html#Setup">セットアップ</a>
-	<li>使い方
+	<li><strong>使い方</strong>
 		<ul>
 			<li><a href="#project-wizard">プロジェクトの新規作成</a></li>
 			<li><a href="#new-html-page">HTML、Pageクラスの作成(Teeda)</a></li>
@@ -60,6 +60,18 @@
 			<li><a href="#sql-dto">SQLファイルからDTOの自動生成</a></li>
 			<li><a href="#marker">マーカー</a></li>
 			<li><a href="#other">その他</a></li>
+		</ul>
+	</li>
+	<li>Scaffold
+		<ul>
+			<li><a href="usage_scaffold_s2dao.html">Teeda + S2Dao</a></li>
+			<li><a href="usage_scaffold_s2dao_public.html">Teeda + S2Dao (public フィールド)</a></li>
+			<li><a href="usage_scaffold_Kuina-Dao.html">Teeda + Kuina-Dao</a></li>
+		</ul>
+	</li>
+	<li>Scaffold Master-Detail
+		<ul>
+			<li><a href="usage_scaffold_master_detailH_s2dao_public.html">Teeda + S2Dao (public フィールド)</a></li>
 		</ul>
 	</li>
 	<li><a href="combination.html">組み合わせ</a></li>
@@ -236,14 +248,14 @@ seasar.orgに配置されているマニュアルを見に行くようにする�
 <p>そのほか以下のように各種遷移が行うことができます。</p>
 
 <ul>
-	<li>Orm.xmlとDao、Entityクラスの相互遷移（KuinaDao）
+	<li>Orm.xmlとDao、Entityクラスの相互遷移（Kuina-Dao）
 	<ul>
 		<li>Ctrl+3またはポップアップメニューの「Open Dao Pair」でDao～Orm.xmlを遷移する。</li>
 		<li>Ctrl+4またはポップアップメニューの「Open Entity Pair」でEntity～Orm.xmlを遷移する。</li>
 		<li>対応するOrm.xmlが存在しない場合、プロジェクトのPreferencesの「OrmXmlPath」で設定したパスにOrm.xmlの雛形を生成する。</li>
 	</ul>
 	</li>
-	<li>HTMLファイルとPage、Actionクラスの相互遷移（S2Dao）
+	<li>HTMLファイルとPage、Actionクラスの相互遷移（Teeda）
 	<ul>
 		<li>Ctrl+5でHTML～Pageを遷移する。</li>
 		<li>Ctrl+6でHTML～Actionを遷移する。</li>
