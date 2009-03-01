@@ -120,13 +120,27 @@ Scaffold Typeに「Teeda + S2Dao」を選択し、ダイアログ下部に表示
 
 <p>
 ディレクトリ「src/main/resources」の配下にある「jdbc.dicon」ファイルを編集します。
-下記のように記述されている箇所があるので、「maxRows」プロパティの行のコメントを外し、
-「maxRows」プロパティを有効にします。
+下記のように記述されている箇所があるので、「pagingSqlRewriter」の設定を追記します。
 </p>
+
+追記前
+<pre>
+&lt;component class="org.seasar.extension.jdbc.impl.ConfigurableStatementFactory"&gt;
+	&lt;arg&gt;
+		&lt;component class="org.seasar.extension.jdbc.impl.BasicStatementFactory"/&gt;
+	&lt;/arg&gt;
+	&lt;property name="fetchSize"&gt;100&lt;/property&gt;
+	&lt;!--
+	&lt;property name="maxRows"&gt;100&lt;/property&gt;
+	--&gt;
+&lt;/component&gt;
+</pre>
+
+追記後
 <pre>
 &lt;!-- LIMIT OFFSET句を使ったSQL書き換えによるページング処理用設定 --&gt;
 &lt;component name="pagingSqlRewriter" class="org.seasar.dao.pager.LimitOffsetPagingSqlRewriter"/&gt;
-	&lt;component class="org.seasar.extension.jdbc.impl.ConfigurableStatementFactory"&gt;
+&lt;component class="org.seasar.extension.jdbc.impl.ConfigurableStatementFactory"&gt;
 	&lt;arg&gt;
 		&lt;component class="org.seasar.extension.jdbc.impl.BasicStatementFactory"/&gt;
 	&lt;/arg&gt;
