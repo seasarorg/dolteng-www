@@ -103,7 +103,7 @@
       <th>JRE</th>
     </tr>
     <tr>
-      <td rowspan="10">Web Application</td>
+      <td rowspan="13">Web Application</td>
       <td rowspan="5">Teeda (Page only)</td>
       <td>-</td>
       <td>-</td>
@@ -178,28 +178,51 @@
     </tr>
 -->
     <tr>
-      <td>S2Flex2</td>
-      <td rowspan="2">S2Dao</td>
+      <td rowspan="2">S2Flex2</td>
+      <td >S2Dao</td>
+	  <td>-</td>
+      <td>-</td>
+      <td>Sysdeo Tomcat Plugin</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <td>S2JDBC</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Sysdeo Tomcat Plugin</td>
+      <td>1.5</td>
+    </tr>    
+    <tr>
+      <td rowspan="2">S2Flex2 (with Flex3.2)</td>
+      <td>S2Dao</td>
       <td>-</td>
       <td>-</td>
       <td>Sysdeo Tomcat Plugin</td>
       <td>1.5</td>
     </tr>
     <tr>
-      <td>S2Flex2 (with Flex3.1)</td>
+      <td>S2JDBC</td>
       <td>-</td>
-      <td>-</td>
+      <td>-</td>      
       <td>Sysdeo Tomcat Plugin</td>
       <td>1.5</td>
-    </tr>
+    </tr>    
     <tr>
-      <td>S2BlazeDS (Server Only)</td>
-      <td>-</td>
+      <td rowspan="2">S2BlazeDS (Server Only)</td>
+      <td>S2Dao</td>
       <td>-</td>
       <td>-</td>
       <td>Sysdeo Tomcat Plugin</td>
       <td>1.5</td>
     </tr>
+     <tr> 
+      <td>S2JDBC</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Sysdeo Tomcat Plugin</td>
+      <td>1.5</td>
+    </tr>
+
     <tr>
       <td rowspan="2">S2JMS-Inbound Application</td>
       <td>-</td>
@@ -266,11 +289,16 @@
       <td>SAStruts + Mayaa</td>
     </tr>
     <tr>
-      <td>S2Flex2</td>
+      <td rowspan="2">S2Flex2</td>
       <td>S2Dao</td>
     </tr>
     <tr>
-      <td rowspan="2">S2Flex2 (with Flex3.1)</td>
+
+      <td>S2JDBC※2</td>
+    </tr>
+    
+    <tr>
+      <td rowspan="2">S2Flex2 (with Flex3.2)</td>
       <td>S2Dao</td>
     </tr>
     <tr>
@@ -285,7 +313,8 @@
     </tr>
   </tbody>
 </table>
-<p>※1 Teeda (with Action) はサポートされません．</p>
+<p>※1 Teeda (with Action) はサポートされません．<br />※2 この組み合わせではパブリックフィールドに対応していないので,生成されたEntityにsetter,gettterを追加する必要があります.</p>
+<p>&nbsp;</p>
 
 <h3><a name="scaffold-master-detail">Scaffold Master-Detail</a></h3>
 <p>Scaffold Master-Detailがサポートしているプレゼンテーションおよびパーシステンスフレームワークの組み合わせは以下のとおりです．</p>
